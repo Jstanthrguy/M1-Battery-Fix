@@ -1,0 +1,17 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary build artifacts
+*.log
+*.tmp
+*.elf
+*.obj
+*.json
+*.cmake
+build.ninja
+CMakeCache.txt
+CMakeFiles/
+
+# Patched source/backups
+patched_fw.bin

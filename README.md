@@ -22,3 +22,9 @@ This is a binary hex-patch of the official `MonstaTek_M1_v0800.elf` which modifi
 5. Select `MonstaTek_M1_Custom.bin` and follow the on-screen prompts.
 
 **Disclaimer:** Use this patch at your own risk. This is an unofficial community fix and is not affiliated with Monstatek.
+
+## How to Revert
+If you wish to return to the factory power settings:
+1. Download the original v0.800 firmware from the MonstaTek official repository or website.
+2. Follow the same installation steps above using the original `.bin` file.
+3. The BQ27421 fuel gauge will reset to factory parameters upon the next full charge cycle.

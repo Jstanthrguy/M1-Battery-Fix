@@ -28,3 +28,10 @@ If you wish to return to the factory power settings:
 1. Download the original v0.800 firmware from the MonstaTek official repository or website.
 2. Follow the same installation steps above using the original `.bin` file.
 3. The BQ27421 fuel gauge will reset to factory parameters upon the next full charge cycle.
+
+### 🛠 Technical Details (for Verification)
+Since the official source is currently uncompilable due to missing headers, this fix was applied via hex-patching the v0.800 binary.
+- **Target Chip:** BQ27421 Fuel Gauge via STM32 I2C bus.
+- **Modified Parameter 1 (Design Capacity):** Changed from `0xXXXX` (incorrect) to `0x0834` (2100mAh).
+- **Modified Parameter 2 (Taper Current):** Changed from `0x00F0` (240mA) to `0x0069` (105mA).
+- **Checksum:** Re-calculated using `srec_cat` to ensure the internal CRC matches the new data.
